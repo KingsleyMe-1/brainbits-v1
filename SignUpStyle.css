@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary:#157AFE;
+    --secondary:#808080;
+    --bg-light:#ffffffef;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #000033, #0000FF);
+}
+
+.portal{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.portal form{
+    background: var(--bg-light);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: min(100%, 470px);
+    padding: 2.2rem 60px 2.2rem 60px;
+    display: grid;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+.title h1{
+    font-size: 2rem;
+    position: relative;
+    padding-left: 25px;
+}
+
+.title h1::before, .title h1::after{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(to bottom, #000033, #0000FF);
+    left: 0;
+    top: 12px;
+    border-radius: 50%;
+}
+
+.title h1::after{
+    animation: pulse 1.3s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.9);
+        opacity: 0;
+    }
+}
+
+
+
+.title p{
+    color: var(--secondary);
+    font-size: .9rem;
+}
+
+input, button{
+    font: inherit;
+    border: 2px solid transparent;
+    outline: 2px solid transparent;
+    border-radius: 5px;
+}
+
+#google-signin{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, 
+            rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    cursor: pointer;
+}
+
+span{
+    color: var(--secondary);
+    display: flex;
+}
+
+span::before, span::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: var(--secondary);
+    margin: auto;
+}
+
+span::before{
+    margin-right: 1rem;
+}
+
+span::after{
+    margin-left: 1rem;
+}
+
+.input-field{
+    position: relative;
+}
+
+.input-field input{
+    background: #eeeeee;
+    padding: 23px 15px 7px;
+    width: 100%;
+    transition: .3s ease;
+}
+
+.select-field-inner{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.select-field input{
+    margin: 0 0.3rem;
+}
+
+.input-field label{
+    position: absolute;
+    color: var(--secondary);
+    left: 15px;
+    top: 16px;
+    transition: .3s ease;
+}
+
+.input-field input:focus ~ label, .input-field input:not(:placeholder-shown) ~ label{
+    font-size: .85rem;
+    top: 5px;
+}
+
+.input-field input:focus{
+    border: 2px solid #0d18e8;
+}
+
+.input-field input:focus ~ label{
+    color:#0d18e8;
+}
+
+#show-hide-pass{
+    width: 1.5rem;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    cursor: pointer;
+}
+
+
+#signin{
+    background: #0d18e8;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:480px) {
+    .portal form{
+        background: var(--bg-light);
+        box-shadow: none;
+        padding: 40px;
+    }
+}

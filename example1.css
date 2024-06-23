@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  #quizContainer {
+    margin-bottom: 20px;
+  }
+  
+  #question {
+    margin-bottom: 10px;
+  }
+  
+  #choices {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #choices li {
+    margin-bottom: 5px;
+  }
+  
+  #scoreContainer {
+    margin-top: 20px;
+  }
+  
+  #resetBtn {
+    margin-top: 10px;
+  }
+  

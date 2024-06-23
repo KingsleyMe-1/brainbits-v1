@@ -1,0 +1,20 @@
+*{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body{
+    background-image: url('background.jpg');
+    background-size: cover;
+}
+
+.formClass{
+    background-color: darkslategrey;
+    width: 30%;
+    margin-left: 33%;
+    margin-top: 12%;
+    padding-left: 4%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    text-align: center;
+    border-radius: 10px;
+}
